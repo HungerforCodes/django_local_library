@@ -36,3 +36,8 @@ urlpatterns += [
 
 # Add URL maps to redirect the base URL to our Application
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# add authentication
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
